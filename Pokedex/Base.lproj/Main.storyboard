@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,9 +24,36 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVL-0z-7wS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg3-3V-ORp">
+                                        <rect key="frame" x="123" y="26" width="129" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="E7l-qp-zfp"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="Yu3-Cv-udB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pax-iY-NNT">
+                                        <rect key="frame" x="335" y="28" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="4dh-LU-kvi"/>
+                                        </constraints>
+                                        <state key="normal" image="music.png"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1QC-om-KSB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.52156862745098043" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Pax-iY-NNT" secondAttribute="bottom" constant="5" id="198-Sr-cEh"/>
                                     <constraint firstAttribute="height" constant="65" id="Bpf-Oq-AdZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pax-iY-NNT" secondAttribute="trailing" constant="8" id="Cc8-nh-x2V"/>
+                                    <constraint firstItem="Pax-iY-NNT" firstAttribute="top" secondItem="PVL-0z-7wS" secondAttribute="top" constant="28" id="f6Q-eS-KVe"/>
+                                    <constraint firstItem="qg3-3V-ORp" firstAttribute="centerX" secondItem="PVL-0z-7wS" secondAttribute="centerX" id="kUi-ae-xXu"/>
+                                    <constraint firstAttribute="bottom" secondItem="qg3-3V-ORp" secondAttribute="bottom" constant="3" id="rPP-UI-UMS"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Ju8-bT-c0l">
@@ -120,5 +152,6 @@
     <resources>
         <image name="4" width="120" height="120"/>
         <image name="bg" width="1920" height="1080"/>
+        <image name="music.png" width="848" height="848"/>
     </resources>
 </document>
