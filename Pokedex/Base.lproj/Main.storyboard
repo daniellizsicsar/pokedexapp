@@ -190,6 +190,9 @@
                                             <constraint firstAttribute="height" constant="25" id="blb-Rc-vFQ"/>
                                         </constraints>
                                         <state key="normal" image="backBtn"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="0dT-YQ-mY5" eventType="touchUpInside" id="vBi-XI-C9U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.52156862749999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -433,10 +436,10 @@
                         <constraints>
                             <constraint firstItem="tKZ-b5-4nQ" firstAttribute="trailing" secondItem="ICL-mg-o56" secondAttribute="trailing" constant="8" id="2He-Hc-fTc"/>
                             <constraint firstItem="seJ-Ys-Mq2" firstAttribute="leading" secondItem="AiM-bB-mhD" secondAttribute="leading" id="BBt-bJ-FDS"/>
-                            <constraint firstItem="seJ-Ys-Mq2" firstAttribute="top" secondItem="hM3-1M-Plc" secondAttribute="top" constant="450" id="Fkv-ot-eb6"/>
                             <constraint firstItem="AiM-bB-mhD" firstAttribute="top" secondItem="hM3-1M-Plc" secondAttribute="top" id="GXd-Sw-k1f"/>
                             <constraint firstItem="tKZ-b5-4nQ" firstAttribute="trailing" secondItem="Dvc-e8-DLd" secondAttribute="trailing" constant="45" id="Ika-6P-JMu"/>
                             <constraint firstItem="seJ-Ys-Mq2" firstAttribute="leading" secondItem="tKZ-b5-4nQ" secondAttribute="leading" id="Nki-2b-VVA"/>
+                            <constraint firstItem="tKZ-b5-4nQ" firstAttribute="bottom" secondItem="Dvc-e8-DLd" secondAttribute="bottom" constant="17" id="XFo-5V-dnP"/>
                             <constraint firstItem="ICL-mg-o56" firstAttribute="leading" secondItem="tKZ-b5-4nQ" secondAttribute="leading" constant="8" id="ZmI-EL-1pG"/>
                             <constraint firstItem="Dvc-e8-DLd" firstAttribute="top" secondItem="seJ-Ys-Mq2" secondAttribute="bottom" constant="20" id="i0a-aQ-8na"/>
                             <constraint firstAttribute="trailing" secondItem="seJ-Ys-Mq2" secondAttribute="trailing" id="ikA-Wf-zJC"/>
@@ -447,7 +450,18 @@
                         <viewLayoutGuide key="safeArea" id="tKZ-b5-4nQ"/>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="KkX-dp-cT0" id="vG9-Rd-1cX"/>
+                        <outlet property="currentEvoImg" destination="Kcu-Zq-r75" id="5ae-Xr-BRG"/>
+                        <outlet property="defenseLbl" destination="4E0-vG-tH9" id="7va-FO-BPy"/>
+                        <outlet property="descriptionLbl" destination="e4X-9y-Tqs" id="aj7-Kf-z7U"/>
+                        <outlet property="evoLbl" destination="aZa-ZG-3MW" id="MVl-e9-bVQ"/>
+                        <outlet property="heightLbl" destination="kEg-SQ-ZUp" id="Q7E-IW-1SN"/>
+                        <outlet property="mainImg" destination="EHH-N1-9cl" id="Sii-E0-Gro"/>
                         <outlet property="nameLBl" destination="qf0-SF-uUM" id="3Bh-7B-A8T"/>
+                        <outlet property="nextEvoImg" destination="HPc-qZ-yzC" id="D8p-fF-m9O"/>
+                        <outlet property="pokedexLbl" destination="n4g-pD-mTT" id="Fj8-pF-tch"/>
+                        <outlet property="typeLbl" destination="nmV-gW-o8p" id="Ax2-RL-Pr3"/>
+                        <outlet property="weightLbl" destination="g8N-W0-F9m" id="jUD-xo-VfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kw-ku-lLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
